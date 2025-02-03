@@ -1,0 +1,1 @@
+copy /Y "D:\DotSp\Progetti\TraceDotSp\ShellDotSpVNextPlugin\Gariglio\plugin\ShellDotSp.Plugin.GariglioCore\ShellDotSp.config" "D:\DotSp\Progetti\TraceDotSp\ShellDotSpVNext\ShellDotSp.UI\bin\Debug\ShellDotSp.config

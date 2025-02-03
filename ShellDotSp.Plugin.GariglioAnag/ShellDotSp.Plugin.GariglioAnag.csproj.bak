@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B7A36E1-1EC6-4218-8656-0E605BC1AEA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShellDotSp.Plugin.GarigliaAnag</RootNamespace>
+    <AssemblyName>ShellDotSp.Plugin.GarigliaAnag</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NLog.4.6.7\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPoco, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NPoco.4.0.2\lib\net45\NPoco.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="48x48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>48x48.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArticolo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArticolo.Designer.cs">
+      <DependentUpon>FrmArticolo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAnagrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAnagrafica.Designer.cs">
+      <DependentUpon>FrmAnagrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IFooterView.cs" />
+    <Compile Include="Interfaces\IMainView.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Presenters\FooterPresenter.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FooterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\FooterControl.Designer.cs">
+      <DependentUpon>FooterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AnagraficheView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AnagraficheView.Designer.cs">
+      <DependentUpon>AnagraficheView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ArticoliView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ArticoliView.Designer.cs">
+      <DependentUpon>ArticoliView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CategorieView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CategorieView.Designer.cs">
+      <DependentUpon>CategorieView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="48x48.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>48x48.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArticolo.resx">
+      <DependentUpon>FrmArticolo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAnagrafica.resx">
+      <DependentUpon>FrmAnagrafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UI\FooterControl.resx">
+      <DependentUpon>FooterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AnagraficheView.resx">
+      <DependentUpon>AnagraficheView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ArticoliView.resx">
+      <DependentUpon>ArticoliView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CategorieView.resx">
+      <DependentUpon>CategorieView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Event\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ShellDotSp.Contract\ShellDotSp.Contract.csproj">
+      <Project>{93e4c9bb-dcff-4f19-b37c-0a3adaff4730}</Project>
+      <Name>ShellDotSp.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ShellDotSp.Core\ShellDotSp.Core.csproj">
+      <Project>{799bddae-92ef-4d40-8ed0-c98401d8bcbd}</Project>
+      <Name>ShellDotSp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellDotSp.Plugin.GariglioCore\ShellDotSp.Plugin.GariglioCore.csproj">
+      <Project>{fc566628-ccc4-405a-959e-c18751c0c098}</Project>
+      <Name>ShellDotSp.Plugin.GariglioCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GariglioCore.Model.CategoriaCollection.datasource" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GariglioCore.Model.UnitaMisuraCollection.datasource" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GariglioCore.Model.VArticoloCollection.datasource" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GesMagCore.Model.AnagraficaCollection.datasource" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GesMagCore.Model.AnagraficaDestinazioneCollection.datasource" />
+    <None Include="Properties\DataSources\ShellDotSp.Plugin.GesMagCore.Model.ArticoloCollection.datasource" />
+    <None Include="Resources\gridlines2-team.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)*.dll" "$(SolutionDir)PluginBin\*.dll"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
